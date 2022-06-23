@@ -6,7 +6,7 @@
 	<title>Sign Up</title>
 	<link rel="stylesheet" type="text/css" href="signup.css">
 </head>
-<body>
+<body onload="getpreviousvalues()">
 	<img class="positioned" src="first.png">
 	<div class="signup">
 		<h1 class="lilmargin signupcolor"  >SIGN UP</h1>
@@ -28,6 +28,11 @@
 	
 <script type="text/javascript">
 	let allStudents=[]
+	function getpreviousvalues(){
+		if(localStorage.allOfStudents){
+			allStudents=JSON.parse(localStorage.allOfStudents)
+		}
+	}
 	function signup(){
 		var newStudents={
 			firstname:fnam.value,
@@ -47,7 +52,9 @@
 			allStudents.push(newStudents)
 			location.replace('signin.html')
 		}
-		
+		localStorage.allOfStudents=JSON.stringify (allStudents)
+		console.log(allStudents)
+
 	}
 </script>
 </body>
