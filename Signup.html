@@ -21,7 +21,7 @@
 		<input class="extendedwidth" type="text" placeholder="Password" id="pass"> <br><br>
 		<input class="extendedwidth" type="text" placeholder="Confirm Password" id="con"> <br><br>
 		</div>
-		<div id="intext" class="innertext"></div><br><br><br><br><br><br><br>
+		<div id="intext" class="innertext"></div><br><br><br><br><br><br>
 		<button class="buttonsignup" onclick="signup()">Sign Up</button>
 		
 
@@ -50,7 +50,7 @@
 			return false
 		}else{
 			allStudents.push(newStudents)
-			location.replace('signin.html')
+			location.assign('signin.html')
 		}
 		localStorage.allOfStudents=JSON.stringify (allStudents)
 		console.log(allStudents)

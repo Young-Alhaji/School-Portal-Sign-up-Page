@@ -21,9 +21,7 @@ font-family: sans-serif;
 .lilmargin{
 	margin-left: 10%;
 }
-.accoutmargin{
-	margin-top: ;
-}
+
 .signupcolor{
 	color: lightskyblue;
 }
@@ -54,3 +52,65 @@ a{
 	margin-left: 61%;
 	color: red;
 	font-weight: bolder;
+}
+
+
+
+
+
+ @media screen and (max-width: 700px) {
+	body{
+font-family: sans-serif;
+	background-color: lightseagreen;
+}
+.positioned{
+	position: relative;
+	height: 50%;
+	width: 100%;
+}
+.signup{
+	margin-left: 30%;
+}
+.buttonsignup{
+	margin-left:40% ;
+}
+.signupdetails{
+	margin-left: 15%;
+}
+.lilmargin{
+	margin-left: 10%;
+}
+
+.signupcolor{
+	color: lightskyblue;
+}
+.thinline{
+	border-bottom:2px solid black ;
+	margin-left: -80%;
+}
+input{
+	height: 30px;
+	width: 43%;
+}
+input.extendedwidth{
+	height: 30px;
+	width: 89%;
+}
+button{
+	background-color: lightskyblue;
+	border-radius: 20px;
+	font-size: 135%;
+	width: 23%;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.innertext{
+	margin-left: 20%;
+	color: red;
+	font-weight: bolder;
+}
+
+}
