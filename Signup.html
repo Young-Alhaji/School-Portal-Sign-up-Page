@@ -26,36 +26,8 @@
 		
 
 	
-<script type="text/javascript">
-	let allStudents=[]
-	function getpreviousvalues(){
-		if(localStorage.allOfStudents){
-			allStudents=JSON.parse(localStorage.allOfStudents)
-		}
-	}
-	function signup(){
-		var newStudents={
-			firstname:fnam.value,
-			surname:snam.value,
-			email:emai.value,
-			password:pass.value
-		}
-		var confirmpassword=con.value
-		if(pass.value!=con.value){
-			intext.innerText=('The passwords inputed are different,Kindly reconfirm the password')
-			return false 
-		}
-		else if (fnam.value==''||snam.value==''||emai.value==''||pass.value==''||con.value==''){
-			intext.innerText=('Please Kindly input all fields')
-			return false
-		}else{
-			allStudents.push(newStudents)
-			location.assign('signin.html')
-		}
-		localStorage.allOfStudents=JSON.stringify (allStudents)
-		console.log(allStudents)
-
-	}
+<script type="text/javascript" src="signup.js">
+	
 </script>
 </body>
 </html>

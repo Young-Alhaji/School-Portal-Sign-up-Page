@@ -1,0 +1,47 @@
+body{
+			font-family: sans-serif;
+			background-color: lightseagreen;
+		}
+		.signincolor{
+	color: lightskyblue;
+}
+.thinline{
+	border-bottom:2px solid black ;
+
+}
+input{
+	height: 30px;
+	width: 35%;
+}
+button{
+	background-color: lightskyblue;
+	border-radius: 5px;
+	font-size: 135%;
+	width: 12%;
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.innertext{
+	margin-left: 61%;
+	color: red;
+	font-weight: bolder;
+}
+.invalidmargin{
+	margin-left: -10%;
+}
+
+
+
+@media screen and (max-width: 800px) {
+button{
+	background-color: lightskyblue;
+	border-radius: 5px;
+	font-size: 135%;
+	width: 100px;
+	cursor: pointer;
+}
+}
