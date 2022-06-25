@@ -29,10 +29,9 @@ let allStudents=[]
 	}
 
 
-
 function signin(){
 		 Email=emai.value
-		Password=pass.value
+		 Password=pass.value
 		var found =false
 		 allStudents=JSON.parse(localStorage.allOfStudents)
 		 for (let i = 0; i<allStudents.length ; i++) {
@@ -48,5 +47,17 @@ function signin(){
 	}
 
 	
-	 
+	
+	function dashboard(){
+			allStudents= JSON.parse(localStorage.allOfStudents)
+			for (let i = 0; i <allStudents.length; i++) {
+				dashitems.innerText= ('Welcome to your Dashboard,'+ ' '+allStudents[i].firstname) 
+				dashitems1.innerText=('Firstname:' +' '+ allStudents[i].firstname)
+				dashitems2.innerText=('Lastname:' +' '+ allStudents[i].surname)
+				dashitems3.innerText=('Email Contact:' +' '+ allStudents[i].email)
+				dashitems4.innerText=('Password:' +' '+ allStudents[i].password)
+
+			}
+			
+		} 
 	
