@@ -14,11 +14,9 @@ let allStudents=[]
 		var confirmpassword=con.value
 		if(pass.value!=con.value){
 			intext.innerText=('The passwords inputed are different,Kindly reconfirm the password')
-			return false 
 		}
 		else if (fnam.value==''||snam.value==''||emai.value==''||pass.value==''||con.value==''){
 			intext.innerText=('Please Kindly input all fields')
-			return false
 		}else{
 			allStudents.push(newStudents)
 			location.assign('signin.html')
@@ -36,6 +34,7 @@ function signin(){
 		 allStudents=JSON.parse(localStorage.allOfStudents)
 		 for (let i = 0; i<allStudents.length ; i++) {
 		 	if(Email==allStudents[i].email && Password==allStudents[i].password){
+		 		localStorage.indexes=JSON.stringify(i)
 		 		var found=true
 		 	}
 		 }
@@ -49,15 +48,22 @@ function signin(){
 	
 	
 	function dashboard(){
-			allStudents= JSON.parse(localStorage.allOfStudents)
+			
+			i=JSON.parse(localStorage.indexes)
+			allStudents=JSON.parse(localStorage.allOfStudents)
+			dashitems.innerText =('Welcome to your Dashboard, '+ allStudents[i].firstname)
+			
+			t='<tr>'
 			for (let i = 0; i <allStudents.length; i++) {
-				dashitems.innerText= ('Welcome to your Dashboard,'+ ' '+allStudents[i].firstname) 
-				dashitems1.innerText=('Firstname:' +' '+ allStudents[i].firstname)
-				dashitems2.innerText=('Lastname:' +' '+ allStudents[i].surname)
-				dashitems3.innerText=('Email Contact:' +' '+ allStudents[i].email)
-				dashitems4.innerText=('Password:' +' '+ allStudents[i].password)
-
+				
+				t+='<th>'+(i+1) +'</th>'
+				t+='<td>'+(allStudents[i].firstname) + '</td>'
+				t+='<td>'+(allStudents[i].surname)+ '</td>'
+				t+='<td>'+(allStudents[i].email)+ '</td>'
+				t+='<td>'+(allStudents[i].password)+ '</td>'
+				t+='</tr>'
 			}
 			
+			tab.innerHTML+=t
 		} 
 	
